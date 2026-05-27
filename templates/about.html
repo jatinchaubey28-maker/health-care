@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="page-title bg-1">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <span class="text-white">About Us</span>
+          <h1 class="text-capitalize mb-5 text-lg">About Us</h1>
+
+          <!-- <ul class="list-inline breadcumb-nav">
+            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+            <li class="list-inline-item"><span class="text-white">/</span></li>
+            <li class="list-inline-item"><a href="#" class="text-white-50">About Us</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<h2 class="title-color">Personal Care for Your Healthy Living</h2>
+			</div>
+			<div class="col-lg-8">
+				<p>Founded with a vision to provide accessible and advanced healthcare, Novena has grown into a leading medical center in the region. We combine expert medical knowledge with the latest technology to ensure every patient receives world-class treatment. Our team of dedicated specialists is committed to your long-term health, offering a wide range of services from preventive check-ups to complex surgical procedures.</p>
+				<img src="{% static 'images/about/sign.png' %}" alt="" class="img-fluid">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="fetaure-page ">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="about-block-item mb-5 mb-lg-0">
+					<img src="{% static 'images/about/about-1.jpg' %}" alt="" class="img-fluid w-100">
+					<h4 class="mt-3">Healthcare for Kids</h4>
+					<p>Specialized pediatric care designed to make our youngest patients feel safe and comfortable while receiving expert medical attention.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="about-block-item mb-5 mb-lg-0">
+					<img src="{% static 'images/about/about-2.jpg' %}" alt="" class="img-fluid w-100">
+					<h4 class="mt-3">Medical Counseling</h4>
+					<p>Professional mental health and wellness support to guide you through recovery and help you maintain a balanced, healthy lifestyle.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="about-block-item mb-5 mb-lg-0">
+					<img src="{% static 'images/about/about-3.jpg' %}" alt="" class="img-fluid w-100">
+					<h4 class="mt-3">Modern Equipment</h4>
+					<p>Equipped with the latest diagnostic technology and advanced surgical tools to ensure precision and the best possible patient outcomes.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="about-block-item">
+					<img src="{% static 'images/about/about-4.jpg' %}" alt="" class="img-fluid w-100">
+					<h4 class="mt-3">Qualified Doctors</h4>
+					<p>Our team consists of board-certified specialists and experienced surgeons dedicated to providing excellence in every department.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section awards">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-4">
+				<h2 class="title-color">Our Doctors' Achievements </h2>
+				<div class="divider mt-4 mb-5 mb-lg-0"></div>
+			</div>
+			<div class="col-lg-8">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="award-img">
+							<img src="{% static 'images/about/3.png' %}" alt="" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="award-img">
+							<img src="{% static 'images/about/4.png' %}" alt="" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="award-img">
+							<img src="{% static 'images/about/1.png' %}" alt="" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="award-img">
+							<img src="{% static 'images/about/2.png' %}" alt="" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="award-img">
+							<img src="{% static 'images/about/5.png' %}" alt="" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="award-img">
+							<img src="{% static 'images/about/6.png' %}" alt="" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section team">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<div class="section-title text-center">
+					<h2 class="mb-4">Meet Our Specialists</h2>
+					<div class="divider mx-auto my-4"></div>
+					<p>Our team consists of world-class medical professionals dedicated to providing the highest standard of care. With years of specialized experience, our doctors work together to ensure your health is in expert hands.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			{% for doctor in doctor_details %}
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block mb-5 mb-lg-0">
+					<img src="{{ doctor.doctor_image.url }}" style="height: 300px; object-fit: cover;" alt="" class="img-fluid w-100">
+					
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="{% url 'doctor_single' doctor.id %}">{{ doctor.doctor_full_name }}</a></h4>
+						<p>{{ doctor.department_name }}</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+
+			{% comment %} <div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block mb-5 mb-lg-0">
+					<img src="{% static 'images/team/2.jpg' %}" alt="" class="img-fluid w-100">
+
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="doctor-single.html">Marshal Root</a></h4>
+						<p>Cardiac Surgeon</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block mb-5 mb-lg-0">
+					<img src="{% static 'images/team/3.jpg' %}" alt="" class="img-fluid w-100">
+
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="doctor-single.html">Siamon John</a></h4>
+						<p>Internist, General Practitioner</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block">
+					<img src="{% static 'images/team/4.jpg' %}" alt="" class="img-fluid w-100">
+
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="doctor-single.html">Rishat Ahmed</a></h4>
+						<p>Orthopedic Surgeon</p>
+					</div>
+				</div>
+			</div> {% endcomment %}
+		</div>
+	</div>
+</section>
+
+<section class="section testimonial">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 offset-lg-6">
+				<div class="section-title">
+					<h2 class="mb-4">What they say about us</h2>
+					<div class="divider  my-4"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row align-items-center">
+			<div class="col-lg-6 testimonial-wrap offset-lg-6">
+				<div class="testimonial-block">
+					<div class="client-info ">
+						<h4>Amazing Service!</h4>
+						<span>John Partho</span>
+					</div>
+					<p>
+						I had a wonderful experience at Novena. From the moment I walked in, the staff made me feel at home. The doctors are incredibly knowledgeable and took the time to explain my treatment plan in detail.
+					</p>
+					<i class="icofont-quote-right"></i>
+					
+				</div>
+
+				<div class="testimonial-block">
+					<div class="client-info">
+						<h4>Expert Doctors!</h4>
+						<span>Mullar Sarth</span>
+					</div>
+					<p>
+						I was extremely impressed by the expertise of the doctors here. They used advanced diagnostic tools to identify my issue quickly and provided a clear, effective treatment plan. The level of professionalism at Novena is truly world-class.
+					</p>
+					<i class="icofont-quote-right"></i>
+				</div>
+
+				<div class="testimonial-block">
+					<div class="client-info">
+						<h4>Good Support!</h4>
+						<span>Kolis Mullar</span>
+					</div>
+					<p>
+						The administrative support at Novena is just as impressive as the medical care. They handled my insurance paperwork and scheduling with such efficiency that I could focus entirely on my recovery. It is rare to find a hospital that values the patient's time so much.
+					</p>
+					<i class="icofont-quote-right"></i>
+				</div>
+
+				<div class="testimonial-block">
+					<div class="client-info">
+						<h4>Nice Environment!</h4>
+						<span>Partho Sarothi</span>
+					</div>
+					<p>
+						The environment at Novena is incredibly calming. Hospitals can often feel intimidating, but the clean, modern design and the friendly greeting at the reception immediately put me at ease.
+					</p>
+					<i class="icofont-quote-right"></i>
+				</div>
+
+				<div class="testimonial-block">
+					<div class="client-info">
+						<h4>Modern Service!</h4>
+						<span>Kolis Mullar</span>
+					</div>
+					<p>
+						What stands out at Novena is the efficiency. I barely had to wait for my consultation, and the laboratory results were delivered directly to my phone the same evening. It’s a very well-managed hospital that respects its patients' time.
+					</p>
+					<i class="icofont-quote-right"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock content %}

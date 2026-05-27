@@ -1,0 +1,703 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<!-- Slider Start -->
+<section class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-xl-7">
+        <div class="block">
+          <div class="divider mb-3"></div>
+          <span class="text-uppercase text-sm letter-spacing"
+            >Total Health care solution</span
+          >
+          <h1 class="mb-3 mt-3">Your most trusted health partner</h1>
+
+          <p class="mb-4 pr-5">
+            Providing world-class medical expertise with a personal touch. From
+            routine check-ups to specialized surgical care, Novena offers
+            advanced technology and compassionate professionals dedicated to
+            your long-term wellbeing.
+          </p>
+          <div class="btn-container">
+            <a
+              href="{% url 'appointment' %}"
+              target="_blank"
+              class="btn btn-main-2 btn-icon btn-round-full"
+              >Make Appointment <i class="icofont-simple-right ml-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="feature-block d-lg-flex">
+          <div class="feature-item mb-5 mb-lg-0">
+            <div class="feature-icon mb-4">
+              <i class="icofont-surgeon-alt"></i>
+            </div>
+            <span>24 Hours Service</span>
+            <h4 class="mb-3">Online Appointment</h4>
+            <p class="mb-4">
+              Get All time support for emergency. We have introduced the
+              principle of family medicine.
+            </p>
+            <a
+              href="{% url 'appointment' %}"
+              class="btn btn-main btn-round-full"
+              >Book Now</a
+            >
+          </div>
+
+          <div class="feature-item mb-5 mb-lg-0">
+            <div class="feature-icon mb-4">
+              <i class="icofont-ui-clock"></i>
+            </div>
+            <span>Timing schedule</span>
+            <h4 class="mb-3">Working Hours</h4>
+            <ul class="w-hours list-unstyled">
+              <li class="d-flex justify-content-between">
+                Mon - Wed : <span>8:00 - 17:00</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                Thu - Fri : <span>9:00 - 17:00</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                Sat - Sun : <span>10:00 - 17:00</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="feature-item mb-5 mb-lg-0">
+            <div class="feature-icon mb-4">
+              <i class="icofont-support"></i>
+            </div>
+            <span>Emergency Cases</span>
+            <h4 class="mb-3">1-800-700-6200</h4>
+            <p>
+              Our emergency department is open 24/7. If you are facing a medical
+              crisis, call our hotline immediately for rapid assistance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 col-sm-6">
+        <div class="about-img">
+          <img
+            src="{% static 'images/about/img-1.jpg' %}"
+            alt=""
+            class="img-fluid"
+          />
+          <img
+            src="{% static 'images/about/img-2.jpg' %}"
+            alt=""
+            class="img-fluid mt-4"
+          />
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="about-img mt-4 mt-lg-0">
+          <img
+            src="{% static 'images/about/img-3.jpg' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="about-content pl-4 mt-4 mt-lg-0">
+          <h2 class="title-color">Personal care <br />& healthy living</h2>
+          <p class="mt-4 mb-5">
+            We provide industry-leading medical services with a team of highly
+            qualified specialists. Our mission is to deliver personalized
+            healthcare solutions using the latest technology, ensuring a
+            healthier life for you and your loved ones through expert diagnosis
+            and compassionate treatment.
+          </p>
+
+          <a
+            href="{% url 'service'%}"
+            class="btn btn-main-2 btn-round-full btn-icon"
+            >Services<i class="icofont-simple-right ml-3"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="container">
+    <div class="cta position-relative">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="counter-stat">
+            <i class="icofont-doctor"></i>
+            <span class="h3">58</span>k
+            <p>Happy People</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="counter-stat">
+            <i class="icofont-flag"></i>
+            <span class="h3">700</span>+
+            <p>Surgeries Completed</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="counter-stat">
+            <i class="icofont-badge"></i>
+            <span class="h3">40</span>+
+            <p>Expert Doctors</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="counter-stat">
+            <i class="icofont-globe"></i>
+            <span class="h3">20</span>
+            <p>Worldwide Branches</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section service gray-bg">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center">
+        <div class="section-title">
+          <h2>AWARD-WINNING PATIENT CARE</h2>
+          <div class="divider mx-auto my-4"></div>
+          <p>
+            With over 20 years of experience and a growing network of global
+            branches, Novena continues to lead the way in surgical success and
+            patient satisfaction. Discover why thousands of families trust us as
+            their primary health partner.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="service-item mb-4">
+          <div class="icon d-flex align-items-center">
+            <i class="icofont-laboratory text-lg"></i>
+            <h4 class="mt-3 mb-3">Laboratory</h4>
+          </div>
+
+          <div class="content">
+            <p class="mb-4">
+              Comprehensive diagnostic testing and advanced pathology services
+              for accurate health assessments.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="service-item mb-4">
+          <div class="icon d-flex align-items-center">
+            <i class="icofont-heart-beat-alt text-lg"></i>
+            <h4 class="mt-3 mb-3">Cardiology</h4>
+          </div>
+          <div class="content">
+            <p class="mb-4">
+              Expert care for your heart, offering specialized diagnosis and
+              treatment for all cardiovascular conditions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="service-item mb-4">
+          <div class="icon d-flex align-items-center">
+            <i class="icofont-tooth text-lg"></i>
+            <h4 class="mt-3 mb-3">Dental Care</h4>
+          </div>
+          <div class="content">
+            <p class="mb-4">
+              Modern dental treatments ranging from routine cleaning to advanced
+              restorative and cosmetic surgery.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="service-item mb-4">
+          <div class="icon d-flex align-items-center">
+            <i class="icofont-crutch text-lg"></i>
+            <h4 class="mt-3 mb-3">Body Surgery</h4>
+          </div>
+
+          <div class="content">
+            <p class="mb-4">
+              State-of-the-art surgical procedures performed by expert surgeons
+              with a focus on patient recovery.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="service-item mb-4">
+          <div class="icon d-flex align-items-center">
+            <i class="icofont-brain-alt text-lg"></i>
+            <h4 class="mt-3 mb-3">Neurology Surgery</h4>
+          </div>
+          <div class="content">
+            <p class="mb-4">
+              Specialized neurosurgical care for complex brain, spine, and
+              nervous system disorders.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="service-item mb-4">
+          <div class="icon d-flex align-items-center">
+            <i class="icofont-dna-alt-1 text-lg"></i>
+            <h4 class="mt-3 mb-3">Gynecology</h4>
+          </div>
+          <div class="content">
+            <p class="mb-4">
+              Compassionate and comprehensive healthcare services dedicated to
+              women’s health at every stage of life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section appointment">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="appointment-content">
+          <img
+            src="{% static 'images/about/img-3.jpg' %}"
+            alt=""
+            class="img-fluid"
+          />
+          <div class="emergency">
+            <h2 class="text-lg">
+              <i class="icofont-phone-circle text-lg"></i>+91 700 700 0000
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-10">
+        <div class="appointment-wrap mt-5 mt-lg-0">
+          <h2 class="mb-2 title-color">Book Appointment</h2>
+          <p class="mb-4">
+            Take the first step toward better health. Fill out the form below to
+            schedule a consultation with our expert medical team. We will
+            confirm your appointment via phone or email.
+          </p>
+          <form id="#" class="appoinment-form" method="post" action="{% url 'home' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <select
+                    class="form-control"
+                    name="d_name"
+                    id="department_name"
+                    onchange="selectData()"
+                    required
+                  >
+                    <option>Choose Department</option>
+                    {% for department in departments %}
+                    <option value="{{ department.id }}">
+                      {{ department.department_name }}
+                    </option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <select id="result" class="form-control" name="d_doctor_name" required>
+                    <option selected disabled>Select Doctor name</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input
+                    name="date"
+                    id="date"
+                    type="date"
+                    class="form-control"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input
+                    name="time"
+                    id="time"
+                    type="time"
+                    class="form-control"
+                    placeholder="Time"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Full Name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input
+                    name="phone"
+                    id="phone"
+                    type="tel"
+                    class="form-control"
+                    placeholder="Mobile Number"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <input
+                  type="file"
+                  accept="image/*"
+                  name="file"
+                  id="file"
+                  class="form-control mb-4"
+                />
+              </div>
+            </div>
+            <div class="form-group-2 mb-4">
+              <textarea
+                name="message"
+                id="message"
+                class="form-control"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+
+            <button class="btn btn-main btn-round-full" type="submit">Make Appointment<i class="icofont-simple-right ml-2"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section testimonial-2 gray-bg">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2>We served over 5000+ Patients</h2>
+          <div class="divider mx-auto my-4"></div>
+          <p>
+            Our patients' health and satisfaction are the true measures of our
+            success. Read what they have to say about their experiences with our
+            specialized medical team and facilities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 testimonial-wrap-2">
+        <div class="testimonial-block style-2 gray-bg">
+          <i class="icofont-quote-right"></i>
+
+          <div class="testimonial-thumb">
+            <img
+              src="{% static 'images/team/test-thumb1.jpg' %}"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+
+          <div class="client-info">
+            <h4>Amazing service!</h4>
+            <span>Vikram Sethi</span>
+            <p>
+              The care I received at Novena was exceptional. The staff was
+              professional, and the booking process was seamless. I highly
+              recommend them for anyone looking for personalized medical
+              attention.
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial-block style-2 gray-bg">
+          <div class="testimonial-thumb">
+            <img
+              src="{% static 'images/team/test-thumb2.jpg' %}"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+
+          <div class="client-info">
+            <h4>Expert doctors!</h4>
+            <span>Dr. Ananya Singh</span>
+            <p>
+              I was impressed by the advanced facilities and the expertise of
+              the doctors. They took the time to explain everything clearly,
+              making me feel comfortable and well-cared for throughout my
+              treatment.
+            </p>
+          </div>
+
+          <i class="icofont-quote-right"></i>
+        </div>
+
+        <div class="testimonial-block style-2 gray-bg">
+          <div class="testimonial-thumb">
+            <img
+              src="{% static 'images/team/test-thumb3.jpg' %}"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+
+          <div class="client-info">
+            <h4>Good Support!</h4>
+            <span>Amit Verma</span>
+            <p>
+              The medical staff was incredibly supportive throughout my surgery
+              and recovery. They answered all my questions and made me feel like
+              I was in safe hands. Truly a five-star experience!
+            </p>
+          </div>
+
+          <i class="icofont-quote-right"></i>
+        </div>
+
+        <div class="testimonial-block style-2 gray-bg">
+          <div class="testimonial-thumb">
+            <img
+              src="{% static 'images/team/test-thumb4.jpg' %}"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+
+          <div class="client-info">
+            <h4>Nice Environment!</h4>
+            <span>Mr. Rajesh Khanna</span>
+            <p class="mt-4">
+              I was very impressed by how clean and modern the facilities are.
+              The atmosphere is very calm, which really helped reduce my anxiety
+              before my appointment. A very well-maintained hospital.
+            </p>
+          </div>
+          <i class="icofont-quote-right"></i>
+        </div>
+
+        <div class="testimonial-block style-2 gray-bg">
+          <div class="testimonial-thumb">
+            <img
+              src="{% static 'images/team/test-thumb1.jpg' %}"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+
+          <div class="client-info">
+            <h4>Modern Service!</h4>
+            <span>Dr. Ankur Sharma</span>
+            <p>
+              The level of care and modern technology used at this facility is
+              impressive. I felt completely at ease knowing I was being treated
+              with the latest medical advancements. The efficiency of the staff
+              made my visit quick and stress-free.
+            </p>
+          </div>
+          <i class="icofont-quote-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section clients">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="section-title text-center">
+          <h2>Partners who support us</h2>
+          <div class="divider mx-auto my-4"></div>
+          <p>
+            We collaborate with leading medical institutions and global health
+            organizations to ensure our patients receive world-class care and
+            access to the latest medical innovations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row clients-logo">
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/1.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/2.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/3.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/4.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/5.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/6.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/3.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/4.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/5.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="client-thumb">
+          <img
+            src="{% static 'images/about/6.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% block javascript %}
+
+<script>
+  function selectData() {
+    var dep_id = document.getElementById("department_name").value;
+
+    $.ajax({
+      type: "POST",
+      url: "/get-doctor-department-name-ajax/",
+      data: {
+        subject_id: dep_id, // add the country id to the POST parameters
+        csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+      },
+      success: function (data) {
+        // `data` is from `get_topics_ajax` view function
+        console.log(data);
+        let html_data = '<option value="">---------</option>';
+        data.forEach(function (data) {
+          html_data += `<option value="${data.id}">${data.doctor_full_name}</option>`;
+        });
+        $("#result").html(html_data); // replace the contents of the topic input with the data that came from the server
+      },
+    });
+  }
+</script>
+{% endblock javascript %} {% endblock content %}

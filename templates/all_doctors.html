@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+   
+<section class="page-title bg-1">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <span class="text-white">All Doctors</span>
+          <h1 class="text-capitalize mb-5 text-lg">Doctors List</h1>
+
+          <!-- <ul class="list-inline breadcumb-nav">
+            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+            <li class="list-inline-item"><span class="text-white">/</span></li>
+            <li class="list-inline-item"><a href="#" class="text-white-50">All Department</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section service-2">
+	<div class="container">
+		{% comment %} <div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
+				<div class="section-title">
+					<h2>Award winning patient care</h2>
+					<div class="divider mx-auto my-4"></div>
+					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+				</div>
+			</div>
+		</div> {% endcomment %}
+
+		<div class="row">
+			 {% for doctor in doctors %}
+            
+         <div class="col-lg-4 col-md-6 ">
+				<div class="department-block mb-5">
+					<img src="{{ doctor.doctor_image.url }}" alt="" class="img-fluid w-100" style="height:400px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">{{doctor.doctor_full_name}}</h4>
+						<p class="mb-4">{{doctor.doctor_description|truncatechars:80}}</p>
+						<a href="{% url 'doctor_single' doctor.id %}" class="read-more">See Details  <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+          {% endfor %}
+      </div>
+	</div>
+</section>
+   
+{% endblock content %}

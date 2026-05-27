@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="section confirmation">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+          <div class="confirmation-content text-center">
+            <i class="icofont-check-circled text-lg text-color-2"></i>
+              <h2 class="mt-3 mb-4">Thank you,</h2>
+              {% if appointment_details %}
+                <p>{{ appointment_details.patient_name }}, your appointment has been successfully scheduled.<br>We look forward to seeing you at Novena Hospital.</p>
+                <p>Doctor: {{ appointment_details.doctor_name }}<br>Date: {{ appointment_details.appointment_date }}<br>Time: {{ appointment_details.appointment_time }}</p>
+              {% else %}
+                <p>Your appointment has been successfully scheduled. We look forward to seeing you at Novena Hospital.</p>
+              {% endif %}
+              <a href="{% url 'home' %}" class="btn btn-main-2 btn-round-full mt-4">Back to Home</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
